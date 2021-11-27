@@ -1,0 +1,155 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-center{
+    align-items: center();
+}
+.justify-between{
+    justify-content: space-between;
+}
+.flex-48{
+    flex: 0 1 48%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* custom css */
+body{
+    text-align: center;
+}
+
+.container{
+    max-width: 1400px;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+
+nav ul{
+    width: 500px;
+}
+nav a{
+    padding: 10px;
+
+}
+
+
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 29;
+}
+h1{
+    font-size: 70px;
+    color: white;
+    font-weight: 600;
+    padding: 20px 20%;
+    padding-top: 10%;
+}    
+
+button{
+   position: absolute;
+   left: 45%;
+   padding: 20px 30px;
+   border: 0;
+   border-radius: 7px;
+   font-size: 20px;
+   font-weight: 600;
+   color: rgb(56, 99, 192);
+}
+.hero{
+    background: rgb(61, 209, 214);
+    width: 100%;
+    height: 100vh;
+}
+img{
+    width: 100%;
+}
+figure
+{
+    margin: 20px 0;
+}
+
+
+a[href$= ".pdf"]{
+    background : url("../img/pdf.png")no-repeat;
+}
+a[href$= ".doc"]{
+    background : url("../img/word.png")no-repeat;
+}
+a[href$= ".jpeg"]{
+    background : url("../img/image.png")no-repeat;
+}
+a[href$= ".mp4"]{
+    background : url("../img/video.png")no-repeat;
+}
+
+.main figure a{
+    color: rgb(168, 164, 164);
+    font-size: 45px;   
+    padding-left: 60px;
+    line-height: 0px;
+    background-size: 50px;
+    margin: 20px;
+
+} 
+.main{
+    margin-top: 400px;
+}
