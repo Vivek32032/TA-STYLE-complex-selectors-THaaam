@@ -1,3 +1,11 @@
+:root{
+--primary: rgb(89,191,194);
+--heading-color: rgb(41,62,125);
+--fontFamily:'Inter', sans-serif;
+--textColor: rgb(116,136,178)
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +61,10 @@ table {
     align-items: center;
 }
 .item-center{
-    align-items: center();
+    align-items: center;
+}
+.item-start{
+    align-items: flex-start;
 }
 .justify-between{
     justify-content: space-between;
@@ -61,15 +72,31 @@ table {
 .flex-48{
     flex: 0 1 48%;
 }
-
+.flex-28{
+    flex: 0 1 28%;
+}
+.flex-20{
+    flex: 0 1 20%;
+}
+.column{
+    flex-direction: column;
+}
+.width-100{
+    width: 100%;
+}
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
+
 /* custom css */
+
+
 body{
     text-align: center;
+    font-family: var(--fontFamily);
 }
 
 .container{
@@ -82,11 +109,16 @@ a{
     text-decoration: none;
 }
 
-nav ul{
+header nav ul{
     width: 500px;
+}
+.brand{
+    color: white;
+    font-size: 25px;
 }
 nav a{
     padding: 10px;
+    color: white;
 
 }
 
@@ -95,6 +127,8 @@ header{
     position: sticky;
     top: 0px;
     z-index: 29;
+    font-size: 30px;
+    padding: 20px;
 }
 h1{
     font-size: 70px;
@@ -103,25 +137,25 @@ h1{
     padding: 20px 20%;
     padding-top: 10%;
 }    
-
-button{
+.btn{
+    padding: 20px 70px;
+    border-radius: 7px;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(56, 99, 192);
+    background-color: white;
+ }
+.trial{
    position: absolute;
-   left: 45%;
-   padding: 20px 30px;
-   border: 0;
-   border-radius: 7px;
-   font-size: 20px;
-   font-weight: 600;
-   color: rgb(56, 99, 192);
+   left: 40%;
 }
 .hero{
-    background: rgb(61, 209, 214);
+    background: var(--primary);
     width: 100%;
     height: 100vh;
 }
-img{
-    width: 100%;
-}
+
 figure
 {
     margin: 20px 0;
@@ -152,4 +186,242 @@ a[href$= ".mp4"]{
 } 
 .main{
     margin-top: 400px;
+}
+
+article{
+    text-align: left;
+}
+article div{
+    flex: 0 1 48%;
+    padding: 10px;
+
+}
+
+h2{
+    font-size: 40px;
+    color: var(--heading-color);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+hr{
+    background-color: var(--primary);
+    color: var(--primary);
+}
+p{
+    font-size: 25px;
+    color: var(--textColor);
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+h4{
+    color: var(--heading-color);
+    font-size: 50px;
+    padding: 20px 0;
+}
+
+
+.learn-more{
+    padding: 10px 20px;
+    border-radius: 0;
+    background-color: var(--primary);
+    color: white;
+    position: relative;
+    margin-left: 40px;
+
+}
+.learn-more::before{
+    content: "ldkjfg";
+    font-size: 0;
+    top: 0;
+    left: -35px;  
+    position: absolute;
+	width: 0;
+	height: 0;
+    display: block;
+	border-top: 28px solid var(--primary);
+	border-left: 35px solid transparent;
+	border-bottom: 28px solid var(--primary);
+}
+.learn-more::after{
+    content: "ldkjfg";
+    right: -28px;  
+    top: 0px;
+    background-color: white;
+    font-size: 0;
+    margin-left: 10px;
+    border-top: 28px solid transparent;
+    position: absolute;
+    border-left: 35px solid var(--primary);
+    border-bottom: 28px solid transparent;
+}
+
+/* table */
+
+table{
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid  gray;
+}
+td{
+    border: 1px solid rgb(179, 177, 177);
+    padding: 20px;
+    color: var(--textColor);
+}
+th{
+    background-color: var(--primary);
+    color: white;
+    padding: 25px;
+    font-size: 30px;
+    font-weight: 700;
+}
+th:first-child{
+    
+    border-top-left-radius: .5rem; 
+}
+th:last-child{
+    border-top-right-radius: .5rem;
+}
+tr:nth-child(2n){
+  background-color: rgb(213,229,229);
+} 
+caption{
+    font-size: 1.4rem;
+    color: var(--secondary);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+
+/* Join us */
+
+.plan div{
+   font-size: 25px;
+   font-weight: 600;
+}
+
+.slider{
+    width: 5.5rem;
+    height: 2.5rem;
+    padding: 8px 10px;
+    background-color: rgb(187,236,236);
+    border-radius: 1.5rem;
+    margin: 2rem;
+    justify-content: flex-end;
+
+}
+.slider div{
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+.plan-discription{
+    border: 5px solid rgb(232,238,252);
+    border-radius: 24px;
+    text-align: center;
+}
+.plan-discription hr{
+    border-color: rgb(232,238,252);
+    margin: 15px;
+}
+.price{
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--primary);
+
+}
+.price::before{
+    content:"$";
+    font-size:3rem;
+    margin-right: 10px;
+}
+.price::after{
+   content: "/Month";
+   font-size: 2.5rem;
+   color: var(--textColor);
+   font-weight: 500;
+   margin-left: 10px;
+}
+
+.plan-discription img{
+    width: 2rem;
+    margin: 0 1rem;
+}
+.plan-discription li{
+    text-align: left;
+    margin: 2.5rem 0;
+
+}
+
+.free-trial{
+    background-color: var(--primary);
+    padding: 8% 0;
+    color: white;
+    margin: 8% 0;
+    border-radius: 2rem;
+}
+.free-trial h2{
+    color: white;
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+}
+
+/* footer */
+
+.footer{
+
+    margin-top: 3rem;
+}
+.nav-social{
+   display: flex;
+   justify-content: flex-start;
+
+}
+.nav-social li{
+    background-color: var(--primary);
+    margin-right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    color: white;
+    margin-right: 2rem;
+
+}
+.nav-social li i{
+   font-size: 25px;
+}
+
+
+footer p{
+    color: var(--textColor);
+    margin: 1rem 0;
+}
+footer address{
+    color: var(--textColor);
+}
+footer li>a:nth-child(n){
+    color: var(--textColor);
+}
+.nav-social i{
+    font-size: .9rem;
+    color: white;
+}
+
+footer h2 a{
+    columns: var(--secondary);
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+.bars{
+    font-size: 1.5rem;
+    display: none;
+}
+input{
+    display: none;
 }
